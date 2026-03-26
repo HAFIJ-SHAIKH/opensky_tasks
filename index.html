@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <title>Opensky Agent</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader-content">
+      <h1 class="loader-title">Opensky</h1>
+      <p class="loader-status" id="loadingLabel">Initializing Agent Core...</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="sliderFill"></div>
+      </div>
+      <div class="progress-stats"><span id="loadingPercent">0.00%</span></div>
+      <div id="modelStatusContainer" class="model-status-container"></div>
+      <div id="debugLog"></div>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div class="app-container" id="chatContainer">
+    
+    <!-- Sidebar / Thought Process Viewer -->
+    <aside class="agent-sidebar" id="agentSidebar">
+      <div class="sidebar-header">
+        <h3>Agent Trace</h3>
+        <button id="clearTraceBtn" title="Clear Trace">×</button>
+      </div>
+      <div class="trace-list" id="traceList">
+        <!-- Steps will appear here -->
+      </div>
+    </aside>
+
+    <!-- Main Chat Interface -->
+    <main class="chat-main">
+      <header class="chat-header">
+        <div class="header-title">Opensky</div>
+        <div class="header-status" id="headerStatus">Ready</div>
+      </header>
+
+      <div class="chat-area" id="messagesArea"></div>
+
+      <footer class="input-area">
+        <div class="input-wrapper">
+          <textarea id="inputText" class="input-field" placeholder="Assign a task..." rows="1"></textarea>
+          <button id="sendBtn" class="send-btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
