@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#000000">
-  <title>Opensky Agent</title>
+  <title>Opensky Tasks</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,12 +14,18 @@
   <!-- Loading Screen -->
   <div class="loading-screen" id="loadingScreen">
     <div class="loader-content">
-      <h1 class="loader-title">Opensky</h1>
+      
+      <!-- Branding Hierarchy -->
+      <div class="loader-brand">OPNESKY</div>
+      <h1 class="loader-title">Tasks</h1>
+      
       <p class="loader-status" id="loadingLabel">Initializing Agent Core...</p>
+      
       <div class="progress-container">
         <div class="progress-bar" id="sliderFill"></div>
       </div>
       <div class="progress-stats"><span id="loadingPercent">0.00%</span></div>
+      
       <div id="modelStatusContainer" class="model-status-container"></div>
       <div id="debugLog"></div>
     </div>
@@ -28,21 +34,19 @@
   <!-- Main App -->
   <div class="app-container" id="chatContainer">
     
-    <!-- Sidebar / Thought Process Viewer -->
+    <!-- Sidebar -->
     <aside class="agent-sidebar" id="agentSidebar">
       <div class="sidebar-header">
         <h3>Agent Trace</h3>
         <button id="clearTraceBtn" title="Clear Trace">×</button>
       </div>
-      <div class="trace-list" id="traceList">
-        <!-- Steps will appear here -->
-      </div>
+      <div class="trace-list" id="traceList"></div>
     </aside>
 
     <!-- Main Chat Interface -->
     <main class="chat-main">
       <header class="chat-header">
-        <div class="header-title">Opensky</div>
+        <div class="header-title">Tasks</div>
         <div class="header-status" id="headerStatus">Ready</div>
       </header>
 
